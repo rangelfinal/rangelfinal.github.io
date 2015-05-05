@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="bower_components/anchor-js/anchor.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -63,14 +64,21 @@
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
+	<div class="jumbotron">
+ 		<div class="container">
+ 			<h1>Bem vindo a minha vida!</h1>
+ 			<p>Aqui tem bastante coisa. Se você quiser, pode pular direto para o <a href="#sobre-resumo">tl:dr</a>, <a href="#contato">formas de contato</a> ou <a href="http://google.com">fugir enquanto ainda pode</a>.</p>
+ 		</div>
+ 	</div>
+
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3" role="complementary">
-				<nav class="affix">
-					<ul class="nav">
+			<div class="col-md-3" role="complementary" id="sidebarDiv">
+				<nav class="sidebar hidden-print hidden-xs hidden-sm">
+					<ul class="nav nav-stacked">
 						<li>
 							<a href="#sobre">Quem é Vitor Rangel?</a>
-							<ul class="nav">
+							<ul class="nav subsidebar">
 								<li><a href="#sobre-resumo">Resumo</a></li>
 								<li><a href="#sobre-infancia">Infância</a></li>
 								<li><a href="#sobre-adolescencia">Adolescência</a></li>
@@ -79,42 +87,102 @@
 						</li>
 						<li>
 							<a href="#cti">Colégio Técnico Industrial</a>
-							<ul class="nav">
-								<li><a href="#cti-sobre">Sobre o CTi</a>
-								<li><a href="#cti-informatica">Informática</a>
-								<li><a href="#cti-icjr">PIBIC Jr.</a>
-								<li><a href="#cti-tcc">TCC</a>
-								<li><a href="#cti-random">Aleatoriedades</a>
+							<ul class="nav subsidebar">
+								<li><a href="#cti-sobre">Sobre o CTi</a></li>
+								<li><a href="#cti-informatica">Informática</a></li>
+								<li><a href="#cti-icjr">PIBIC Jr.</a></li>
+								<li><a href="#cti-tcc">TCC</a></li>
+								<li><a href="#cti-random">Aleatoriedades</a></li>
 							</ul>
 						</li>
 						<li>
 							<a href="#ufscar">UFSCar</a>
-							<ul class="nav">
-								<li><a href="#ufscar-sobre">Sobre a UFSCar</a>
-								<li><a href="#ufscar-engfis">Engenharia Física</a>
-								<li><a href="#ufscar-cursos">Cursos externos</a>
-								<li><a href="#ufscar-random">Aleatoriedades</a>
+							<ul class="nav subsidebar">
+								<li><a href="#ufscar-sobre">Sobre a UFSCar</a></li>
+								<li><a href="#ufscar-engfis">Engenharia Física</a></li>
+								<li><a href="#ufscar-cursos">Cursos externos</a></li>
+								<li><a href="#ufscar-random">Aleatoriedades</a></li>
 							</ul>
 						</li>
 						<li>
-							<a href="#ufscar">Physis Jr.</a>
-							<ul class="nav">
-								<li><a href="#physis-sobre">Sobre a Physis Jr.</a>
-								<li><a href="#physis-trainee">Trainne</a>
-								<li><a href="#physis-diretor">Diretor de TI</a>
-								<li><a href="#physis-eventos">Eventos</a>
-								<li><a href="#physis-projetos">Projetos</a>
-								<li><a href="#physis-cursos">Cursos</a>
-								<li><a href="#physis-random">Aleatoriedades</a>
+							<a href="#physis">Physis Jr.</a>
+							<ul class="nav subsidebar">
+								<li><a href="#physis-sobre">Sobre a Physis Jr.</a></li>
+								<li><a href="#physis-trainee">Trainee</a></li>
+								<li><a href="#physis-diretor">Diretor de TI</a></li>
+								<li><a href="#physis-eventos">Eventos</a></li>
+								<li><a href="#physis-projetos">Projetos</a></li>
+								<li><a href="#physis-cursos">Cursos</a></li>
+								<li><a href="#physis-random">Aleatoriedades</a></li>
 							</ul>
 						</li>
+						<li>
+							<a href="#ti">Tecnologia da Informação</a>
+							<ul class="nav subsidebar">
+								<li><a href="#ti-sobre">O que é TI?</a></li>
+								<li><a href="#ti-linguagens">Linguagens de programação</a></li>
+								<li><a href="#ti-frameworks">Frameworks</a></li>
+								<li><a href="#ti-toolbelt">Ferramentas</a></li>
+								<li><a href="#ti-projetos">Projetos</a></li>
+								<li><a href="#ti-cursos">Cursos</a></li>
+								<li><a href="#ti-random">Aleatoriedades</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#personalidade">Personalidade</a>
+							<ul class="nav subsidebar">
+								<li><a href="#personalidade-bio">Mini autobiografia</a></li>
+								<li><a href="#personalidade-jogos">Jogos</a></li>
+								<li><a href="#personalidade-livros">Livros</a></li>
+								<li><a href="#personalidade-filmes">Filmes</a></li>
+								<li><a href="#personalidade-otaku">Animes/Mangás</a></li>
+								<li><a href="#personalidade-origami">Origamis</a></li>
+								<li><a href="#personalidade-random">Aleatoriedades</a></li>
+							</ul>
+						</li>
+						<li><a href="#top"> Topo </a></li>
 					</ul>
 				</nav>
 			</div>
 			<div class="col-md-9" role="main">
-				<h1> Hello Word! </h1>
+				<h1 id="sobre"> Quem é Vitor Rangel?</h1>
+				<h2 id="sobre-resumo">Resumo</h2>
+				<h2 id="sobre-infancia">Infância</h2>
+				<h2 id="sobre-adolescencia">Adolescência</h2>
+				<h2 id="sobre-fotos">Fotinhos de bebê</h2>
+				<h1 id="cti">Colégio Técnico Industrial</h1>
+				<h2 id="cti-sobre">Sobre o CTi</h2>
+				<h2 id="cti-informatica">Informática</h2>
+				<h2 id="cti-icjr">PIBIC Jr.</h2>
+				<h2 id="cti-tcc">TCC</h2>
+				<h2 id="cti-random">Aleatoriedades</h2>
+				<h1 id="ufscar">UFSCar</h2>
+				<h2 id="ufscar-sobre">Sobre a UFSCar</h2>
+				<h2 id="ufscar-engfis">Engenharia Física</h2>
+				<h2 id="ufscar-cursos">Cursos externos</h2>
+				<h2 id="ufscar-random">Aleatoriedades</h2>
+				<h1 id="physis">Physis Jr.</h2>
+				<h2 id="physis-sobre">Sobre a Physis Jr.</h2>
+				<h2 id="physis-trainee">Trainee</h2>
+				<h2 id="physis-diretor">Diretor de TI</h2>
+				<h2 id="physis-eventos">Eventos</h2>
+				<h2 id="physis-projetos">Projetos</h2>
+				<h2 id="physis-cursos">Cursos</h2>
+				<h2 id="physis-random">Aleatoriedades</h2>
+				<h1 id="personalidade">Personalidade</h1>
+				<h2 id="personalidade-bio">Mini autobiografia</h2>
+				<h2 id="personalidade-jogos">Jogos</h2>
+				<h2 id="personalidade-livros">Livros</h2>
+				<h2 id="personalidade-filmes">Filmes</h2>
+				<h2 id="personalidade-otaku">Animes/Mangás</h2>
+				<h2 id="personalidade-origami">Origamis</h2>
+				<h2 id="personalidade-random">Aleatoriedades</h2>
 			</div>
 		</div>
 	</div>
+	<script src="bower_components/anchor-js/anchor.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+
 </body>
 </html>
