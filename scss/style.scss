@@ -15,6 +15,25 @@ license: MIT
 author: bootply.com
 */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Oswald', sans-serif;
+	color: #666666;
+	margin-top: 100px;
+}
+
+h2 {
+	margin-top: 50px;
+	text-align: right;
+}
+
 .affix-top,.affix{
  position: static;
 }
@@ -25,15 +44,40 @@ author: bootply.com
   	margin-top:30px;
   	width:228px;
   }
-  
+
   .sidebar.affix {
     position: fixed;
     top:70px;
     width:228px;
   }
+
+  .sidebar.affix-bottom {
+  	position: absolute;
+    margin-bottom:70px;
+    width:228px;
+  }
 }
 
-.sidebar li.active {
+.sidebar > ul > li.active > a {
   border:0 #bbbbbb solid;
   border-left-width:5px;
+}
+
+.subsidebar > li > a {
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.subsidebar > li.active > a {
+  border:0 #bbbbbb solid;
+  border-right-width:2px;
+}
+
+html {
+	position:relative;min-height:100%;
+}
+
+body {
+	margin-bottom:60px;
 }
