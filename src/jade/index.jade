@@ -1,0 +1,392 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Vitor Rangel
+    link(rel='stylesheet', href='css/style.css')
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+  body#top
+    nav.navbar.navbar-default
+      .container-fluid
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Vitor Rangel
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#')
+                | Link
+                span.sr-only (current)
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Dropdown
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider
+                li
+                  a(href='#') Separated link
+                li.divider
+                li
+                  a(href='#') One more separated link
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')
+            button.btn.btn-default(type='submit') Submit
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') Link
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+                | Dropdown
+                span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li.divider
+                li
+                  a(href='#') Separated link
+        // /.navbar-collapse
+      // /.container-fluid
+    .jumbotron
+      .container
+        h1 Vitor Terçariol Rangel
+        address
+          strong 21 anos
+          br
+          strong Cursando Engenharia Física na UFSCar
+          br
+          a(href='mailto:vitor@rangel.website') vitor@rangel.website
+          br
+          a(href='https://www.facebook.com/rangel.final') Facebook
+          br
+          | 	  			Celular: +55 (14) 981 586 475
+          br
+        p
+          | Aqui tem bastante coisa. Se você quiser, pode pular direto para o
+          a(href='#sobre-resumo') tl:dr
+          | ,
+          a(href='#contato') formas de contato
+          |  ou
+          a(href='https://www.google.com.br/search?q=eyebleach') fugir enquanto ainda pode
+          | .
+    .container
+      .row
+        #sidebarDiv.col-md-3(role='complementary')
+          nav.sidebar.hidden-print.hidden-xs.hidden-sm
+            ul.nav.nav-stacked
+              li
+                a(href='#sobre') Quem é Vitor Rangel?
+                ul.nav.subsidebar
+                  li
+                    a(href='#sobre-resumo') Resumo
+                  li
+                    a(href='#sobre-infancia') Infância
+                  li
+                    a(href='#sobre-adolescencia') Adolescência
+                  li
+                    a(href='#sobre-fotos') Fotinhos de bebê
+              li
+                a(href='#cti') Colégio Técnico Industrial
+                ul.nav.subsidebar
+                  li
+                    a(href='#cti-sobre') Sobre o CTi
+                  li
+                    a(href='#cti-informatica') Informática
+                  li
+                    a(href='#cti-icjr') PIBIC Jr.
+                  li
+                    a(href='#cti-tcc') TCC
+                  li
+                    a(href='#cti-random') Aleatoriedades
+              li
+                a(href='#ufscar') UFSCar
+                ul.nav.subsidebar
+                  li
+                    a(href='#ufscar-sobre') Sobre a UFSCar
+                  li
+                    a(href='#ufscar-engfis') Engenharia Física
+                  li
+                    a(href='#ufscar-cursos') Cursos externos
+                  li
+                    a(href='#ufscar-random') Aleatoriedades
+              li
+                a(href='#physis') Physis Jr.
+                ul.nav.subsidebar
+                  li
+                    a(href='#physis-sobre') Sobre a Physis Jr.
+                  li
+                    a(href='#physis-trainee') Trainee
+                  li
+                    a(href='#physis-diretor') Diretor de TI
+                  li
+                    a(href='#physis-eventos') Eventos
+                  li
+                    a(href='#physis-projetos') Projetos
+                  li
+                    a(href='#physis-cursos') Cursos
+                  li
+                    a(href='#physis-random') Aleatoriedades
+              li
+                a(href='#ti') Tecnologia da Informação
+                ul.nav.subsidebar
+                  li
+                    a(href='#ti-sobre') O que é TI?
+                  li
+                    a(href='#ti-linguagens') Linguagens de programação
+                  li
+                    a(href='#ti-frameworks') Frameworks
+                  li
+                    a(href='#ti-toolbelt') Ferramentas
+                  li
+                    a(href='#ti-projetos') Projetos
+                  li
+                    a(href='#ti-cursos') Cursos
+                  li
+                    a(href='#ti-random') Aleatoriedades
+              li
+                a(href='#personalidade') Personalidade
+                ul.nav.subsidebar
+                  li
+                    a(href='#personalidade-bio') Mini autobiografia
+                  li
+                    a(href='#personalidade-jogos') Jogos
+                  li
+                    a(href='#personalidade-livros') Livros
+                  li
+                    a(href='#personalidade-filmes') Filmes
+                  li
+                    a(href='#personalidade-otaku') Animes/Mangás
+                  li
+                    a(href='#personalidade-origami') Origamis
+                  li
+                    a(href='#personalidade-random') Aleatoriedades
+              li
+                a(href='#contato') Contato
+                ul.nav.subsidebar
+                  li
+                    a(href='#contato-oficial') Contatos profissionais
+                  li
+                    a(href='#contato-social') Redes sociais
+                  li
+                    a(href='#contato-jogos') Steam
+                  li
+                    a(href='#contato-programacao') Programação
+                  li
+                    a(href='#contato-outros') Outros
+              li
+                a.back-to-top(href='#top') Topo
+        .col-md-9(role='main')
+          h1#sobre(style='margin-top:30px;')  Quem é Vitor Rangel?
+          blockquote
+            p Você pode me ajudar com o DVD player?
+            footer
+              | Anézia Gerduli -
+              cite(title='Source Title') Avó de Vitor Rangel
+          h2#sobre-resumo
+            small TL;DR
+            |  Resumo
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores eveniet eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae blanditiis praesentium, vitae ab sint earum, voluptate velit.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, nisi, reiciendis, laboriosam neque nobis deleniti ab tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam aliquid vero qui. Eos?
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magni, corporis esse quia! Quas cum pariatur, perspiciatis sapiente praesentium ex dicta eligendi amet ad perferendis assumenda atque quae porro qui?
+          h2#sobre-infancia Infância
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam dolores eveniet eligendi et nobis neque minus mollitia sit repudiandae ad repellendus recusandae blanditiis praesentium, vitae ab sint earum, voluptate velit.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, nisi, reiciendis, laboriosam neque nobis deleniti ab tenetur molestiae maxime id quaerat consequatur fugiat aliquam laborum nam aliquid vero qui. Eos?
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magni, corporis esse quia! Quas cum pariatur, perspiciatis sapiente praesentium ex dicta eligendi amet ad perferendis assumenda atque quae porro qui?
+          h2#sobre-adolescencia Adolescência
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem deleniti necessitatibus, totam ratione sunt nihil enim voluptates alias distinctio magni sed excepturi dolorum, maxime. Magnam fuga, nulla consequatur temporibus.
+          h2#sobre-fotos Fotinhos de bebê
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, vitae odit culpa cumque nulla, voluptate, facilis dolores tempora aliquam incidunt laboriosam deserunt distinctio delectus temporibus fugiat sint repellat dignissimos pariatur!
+          h1#cti
+            a(href='http://www.cti.feb.unesp.br')
+              | Colégio Técnico Industrial
+              small "Prof. Isaac Portal Rodan"
+          h2#cti-sobre Sobre o CTi
+          p
+            | O Colégio Técnico Industrial é uma das três unidades de ensino médio e profissionalizante da Universidade Estadual Paulista. Criado no dia 7 de abril de 1967, o Colégio foi a primeira unidade da Unesp no câmpus de Bauru. Seu primeiro diretor foi Isaac Portal Roldán, que hoje dá nome ao Colégio.
+          h2#cti-informatica Informática
+          p
+            | O Técnico em Informática é um profissional preparado para acompanhar as constantes evoluções de sua área de atuação. As atividades compreendidas no curso são de concepção, especificação, projeto, implementação, avaliação, suporte e manutenção de diversos tipos de sistemas de informação. Pode ainda atuar em empresas industriais e comerciais, de consultoria, de prestação de serviços, centros de pesquisas e desenvolvimento ou ser um profissional autônomo.
+          h2#cti-icjr PIBIC Jr.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quisquam et velit quaerat officiis animi amet necessitatibus ab, optio nulla illum obcaecati sunt, corporis consectetur aperiam molestiae consequuntur asperiores accusantium.
+          h2#cti-tcc TCC
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quibusdam atque sit nulla expedita. Quas sequi, molestiae repellendus tempore, dolor porro est nostrum explicabo harum, minus odio. Natus, consectetur, dicta!
+          h2#cti-random Aleatoriedades
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat, ea asperiores rem quae voluptates. Fuga a commodi doloribus tenetur amet dolorem eos sint totam, voluptatibus quae non nisi quas.
+          h1#ufscar
+            | UFSCar
+            small Universidade Federal de São Carlos
+            h2#ufscar-sobre Sobre a UFSCar
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor consequuntur mollitia quibusdam! Minima vitae quos veritatis sint laborum, quibusdam, non animi maiores, omnis quisquam fugit unde dolorum, ea illo delectus!
+            h2#ufscar-engfis Engenharia Física
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fugiat ex voluptatum. Provident consequuntur ipsam perferendis, quisquam dicta inventore quis distinctio animi recusandae et praesentium dignissimos amet necessitatibus, accusantium ullam.
+            h2#ufscar-cursos Cursos externos
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maiores ea cumque quo minima voluptatum, laborum omnis aperiam est reiciendis tempora, iure voluptas rem dolore laboriosam recusandae beatae officiis magnam.
+            h2#ufscar-random Aleatoriedades
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, hic sit assumenda in nisi praesentium molestiae laborum cum earum? Nobis quae debitis rem deserunt architecto nemo, molestiae? Tempora, neque, qui!
+            h1#physis
+              | Physis Jr.
+              small Empresa Júnior da Engenharia Física
+              .physis
+                .row
+                  h2#physis-sobre.pull-right
+                    | Sobre a
+                    a(href='http://physisjr.com')
+                      img.responsive-image.logo-physis(src='img/logo-physis.png')
+                br
+                h3 Missão
+                p.lead.text-center Formar e transformar: do estudante ao profissional, do teórico ao prático.
+                h3 Visão
+                p.lead.text-center
+                  | Em 2015 estar apto a integrar a FEJESP, cumprindo todos os requisitos necessários em seu processo de filiação.
+                h3 Valores
+                dl.dl-horizontal
+                  dt ORGULHO de ser Júnior
+                  dd Nós amamos o que fazemos.
+                  dt Harmonia e Alto Astral
+                  dd Um ambiente perfeitamente formal suprime ideias e destroi amizades.
+                  dt Comprometimento
+                  dd Terminar o que começar, com zelo e perfeccionismo.
+                  dt Transparência
+                  dd Somos filhos de vidraceiros
+                  dt Lendário
+                  dd
+                    | Não queremos ser só importantes. Ser os maiores de nossa era não é o suficiente. Nosso dever é ficar para história.
+                h3 História
+                p
+                  | Fundou-se, em 2003, a primeira empresa júnior da Engenharia Física do Brasil, a Physis Jr., que é amparada por toda a infra-estrutura da Universidade Federal de São Carlos e conta com a colaboração do corpo docente do Departamento de Física dessa universidade. A empresa insere no mercado um novo conceito de engenharia: a solução de problemas aplicando o forte embasamento científico multidisciplinar adquirido pelos membros na graduação.
+                p
+                  | Oferecemos, para empresas, serviços e soluções inovadoras e diferenciadas, com ótimo custo-benefício, o que nos permite disseminar o conhecimento e apresentar à comunidade o que faz um Engenheiro Físico, um profissional relativamente novo no mercado brasileiro.
+                p
+                  | Para nossos membros, buscamos oferecer visão de mercado e noções de âmbito empresarial, possibilitando o desenvolvimento do espírito empreendedor e preparo para a vida profissional.
+              h2#physis-trainee
+                small Tem que começar de algum lugar
+                |  Trainee
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, natus possimus odio obcaecati quos ipsa quas consequatur. Omnis neque atque magnam nemo ipsum accusamus? Ipsa deleniti voluptas, corporis minus. Id?
+              h2#physis-diretor
+                small O grande culpado por todos os pequenos problemas
+                |  Diretor de TI
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam rerum delectus excepturi, labore maiores veritatis sint provident esse ea molestiae facilis numquam quo ut, nihil alias ex similique, deleniti.
+              h2#physis-eventos Eventos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum iure obcaecati consequuntur, totam perspiciatis. Aut ullam ex alias. Qui dicta impedit sapiente animi, commodi in provident nesciunt odio, minus vero!
+              h2#physis-projetos Projetos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptate necessitatibus quisquam perspiciatis consectetur pariatur nisi cupiditate, ab quos voluptatum omnis non ex fuga mollitia! Hic officiis dignissimos quo expedita!
+              h2#physis-cursos
+                small Doses cavalares de Excel
+                |  Cursos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, ipsam cum maiores rem, similique placeat cumque voluptatibus, nulla ratione earum, dignissimos hic! Quis consequuntur aut rerum. Omnis, quos deleniti hic.
+              h2#physis-random Aleatoriedades
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis provident soluta, praesentium et dolor voluptatem nam deserunt a vero amet neque ipsa, officiis repudiandae labore illum voluptatum pariatur, ea alias?
+              h1#ti
+                | Tecnologia da Informação
+                small O futuro do futuro
+              h2#ti-sobre O que é TI?
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore at eius velit nam, veritatis officia tenetur laboriosam incidunt numquam facere ducimus repellendus? Minus error beatae cupiditate dolore, ipsa, recusandae exercitationem.
+              h2#ti-linguagens Linguagens de programação
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis illo, autem in veritatis aperiam repudiandae ut reprehenderit aliquam? Exercitationem sunt nobis, nesciunt, eius quisquam natus ipsam aspernatur ratione enim recusandae.
+              h2#ti-frameworks Frameworks
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quis, illo, quas totam dignissimos aspernatur incidunt sit sapiente voluptates pariatur cupiditate accusamus expedita minus nostrum! Tempore, nisi explicabo consectetur nobis.
+              h2#ti-toolbelt Ferramentas
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero explicabo reprehenderit, omnis atque quae velit fugit ea fugiat consequatur hic commodi rem natus. Quis vel at beatae aspernatur! Est?
+              h2#ti-projetos Projetos
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, velit. Reiciendis fugit blanditiis eos similique voluptatem odio commodi, optio deleniti accusamus! Quam necessitatibus impedit rerum aperiam ex soluta accusamus distinctio?
+              h2#ti-cursos Cursos
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nulla aspernatur, tenetur id nihil impedit culpa amet facilis laudantium. Natus mollitia iusto est cupiditate esse? Fugiat autem doloribus dolor tenetur.
+              h2#ti-random Aleatoriedades
+              | 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nam sint alias id impedit eaque dicta esse necessitatibus quae officia quis natus inventore delectus vel dignissimos, unde perferendis consequatur quod!
+              h1#personalidade
+                | Personalidade
+                small Ou: Porque você deve me contratar
+              h2#personalidade-bio Mini autobiografia
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore mollitia quidem vitae, in assumenda facilis a voluptas suscipit accusantium officia, quisquam maiores, neque quaerat reiciendis earum aspernatur nam, cumque unde.
+              h2#personalidade-jogos Jogos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sint excepturi ut error quam maxime esse eveniet provident laboriosam a suscipit officia cupiditate, ea aut odit similique omnis quidem tenetur!
+              h2#personalidade-livros Livros
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, dicta quaerat hic quia impedit nulla quo ipsa suscipit optio libero doloremque praesentium, maiores sapiente, ipsam dolor quasi! Eveniet, nobis, eum.
+              h2#personalidade-filmes Filmes
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere consectetur a in sed repellendus. Commodi corrupti accusantium eveniet eius iure harum aut praesentium quibusdam similique, officia quos repellat odio. Non!
+              h2#personalidade-otaku Animes/Mangás
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae repellendus voluptates error delectus voluptatibus quibusdam consectetur laboriosam sunt! Recusandae nesciunt dignissimos non quaerat. Sed rem impedit amet laboriosam, dignissimos quidem.
+              h2#personalidade-origami Origamis
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti veritatis, perferendis reprehenderit dolore nostrum perspiciatis mollitia, vitae eaque, id error, laboriosam alias nulla itaque nemo nisi enim dolor ipsa repellendus.
+              h2#personalidade-random Aleatoriedades
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum sint deleniti adipisci rerum? Incidunt magnam nihil harum magni architecto itaque! Eaque excepturi exercitationem accusamus ea beatae unde nulla, animi est.
+              h1#contato
+                | Contato
+                small Diga oi!
+              h2#contato-oficial
+                small Email, celular, LinkedIn
+                |  Contatos profissionais
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita impedit voluptas quam, quisquam, sequi quo commodi vitae modi veniam, nulla sed repudiandae aliquam harum aut ducimus. Id magnam mollitia ipsum.
+              h2#contato-social
+                small Facebook, Twitter
+                |  Redes sociais
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti cupiditate laboriosam laborum impedit dolore sed qui architecto quia aspernatur, dolor? Reprehenderit distinctio quia impedit amet in vero commodi? Quibusdam, numquam.
+              h2#contato-jogos
+                small Dota 2
+                |  Steam
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus similique dolores aliquam a amet iusto harum consectetur, officiis magnam nobis rem asperiores earum consequatur et totam! Ut non, deserunt deleniti.
+              h2#contato-programacao
+                small Github, BitBucket
+                |  Programação
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa provident ducimus ullam aperiam repellendus, quasi placeat, ex odio, voluptates molestiae similique numquam quidem dolorum at adipisci repellat possimus qui. Explicabo.
+              h2#contato-outros Outros
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates autem error cum, facere sit ea sint culpa aspernatur recusandae, animi, corrupti eius nisi architecto fuga quas et quis a alias!
+    hr
+    footer.footer
+      .container
+        p.text-muted
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque architecto repudiandae accusantium voluptatum fugiat sit quas suscipit harum, consectetur reprehenderit illum, vero eveniet vitae beatae doloremque est! Nulla, totam, eius.
+    script(src='js/vendor.js', type='text/javascript')
+    script(src='js/app.js', type='text/javascript', charset='utf-8')
