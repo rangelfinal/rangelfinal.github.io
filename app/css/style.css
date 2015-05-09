@@ -77,6 +77,25 @@
   */
 }
 
+html, body {
+  margin: 0;
+  background-color: #17577E;
+  color: #7e3e17; }
+
+body {
+  margin-bottom: 60px; }
+
+.page1 {
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+  text-align: center;
+  background-color: inherit; }
+
+.footer {
+  position: fixed;
+  height: 60px; }
+
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Oswald);

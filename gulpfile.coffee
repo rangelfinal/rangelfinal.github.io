@@ -98,7 +98,9 @@ buildCSS = (minify=false) ->
 compileHTML = ->
 	gulp.src(paths.src.jade)
 		.pipe(plumber())
-		.pipe(jade())
+		.pipe(jade({
+			pretty: true
+			}))
 
 buildHTML = (minify=false) ->
 	html = compileHTML()
@@ -109,7 +111,17 @@ buildHTML = (minify=false) ->
 
 	html.pipe(gulp.dest(paths.app.root))
 
+watchCSS = ->
+	watch paths.src.scss, ->
+		buildCSS().pipe(plumber())
 
+watchJS = ->
+	watch paths.src.coffee, ->
+		buildJS().pipe(plumber())
+
+watchHTML = ->
+	watch paths.src.jade, ->
+		buildHTML().pipe(plumber())
 
 # Tasks
 
@@ -137,11 +149,16 @@ gulp.task 'buildAll', ->
 	buildFonts()
 	buildHTML()
 
-gulp.task 'watch', ->
+gulp.task 'watchCSS', ->
+	watchCSS()
 
-	watch('./src/coffee/*.coffee', 'buildAllJS')
-	watch('./src/jade/*.jade', 'buildAllHTML')
-	watch('./src/scss/*.scss', 'buildAllCSS')
+gulp.task 'watchJS', ->
+	watchJS()
+
+gulp.task 'watchHTML', ->
+	watchHTML()
+
+gulp.task 'watch', ['watchCSS','watchHTML','watchJS']
 
 # Default
 
