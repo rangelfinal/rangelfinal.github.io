@@ -26,6 +26,7 @@
     "jquery": "~2.1.4",
     "angular-bootstrap": "~0.13.0",
     "anchor-js": "~0.4.0",
-    "bootstrap-sass": "~3.3.4"
+    "bootstrap-sass": "~3.3.4",
+    "font-awesome": "~4.3.0"
   }
 }

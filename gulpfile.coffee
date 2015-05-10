@@ -9,6 +9,7 @@ watch = require('gulp-watch')
 plumber = require('gulp-plumber')
 gulpif = require('gulp-if')
 merge = require('merge-stream');
+livereload = require('gulp-livereload');
 
 # Pré-Compiladores
 sass = require('gulp-sass')
@@ -36,8 +37,10 @@ paths =
 		"./bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"]
 		css: ["./bower_components/anchor-js/anchor.css",
 		"./bower_components/bootstrap/dist/bootstrap-theme.min.css"]
-		scss: ["./bower_components/bootstrap-sass/assets/stylesheets/"]
-		font: ["./bower_components/bootstrap/dist/fonts/*.*"]
+		scss: ["./bower_components/bootstrap-sass/assets/stylesheets/",
+		"./bower_components/font-awesome/scss"]
+		font: ["./bower_components/bootstrap/dist/fonts/*.*",
+		"./bower_components/font-awesome/fonts/*.*"]
 	app:
 		css: "./app/css/"
 		js: "./app/js/"
@@ -47,7 +50,7 @@ paths =
 
 # Functions
 
-compileVendorCSS = -> gulp.src(paths.vendor.css).pipe(plumber())
+compileVendorCSS = -> gulp.src(paths.vendor.css).pipe(plumber()).pipe(concat("vendor.css"))
 compileVendorJS = -> gulp.src(paths.vendor.js).pipe(plumber())
 compileVendorFonts = -> gulp.src(paths.vendor.font).pipe(plumber())
 buildFonts = -> gulp.src(paths.vendor.font).pipe(gulp.dest(paths.app.font))
@@ -57,6 +60,7 @@ gulp.task "fonts", -> buildFonts()
 compileJS = ->
 	coffeestream = coffee({bare:true})
 	coffeeSRC = gulp.src(paths.src.coffee)
+		.pipe(plumber())
 		.pipe(gulpif(/[.]coffee$/, coffeestream))
 		.pipe(ngAnnotate())
 
@@ -77,13 +81,14 @@ buildJS = (minify = false) ->
 
 compileCSS = ->
 	gulp.src(paths.src.scss)
+		.pipe(plumber())
 		.pipe(sass({
 			includePaths: paths.vendor.scss
 		}))
 
 concatCSS = ->
 	merge(compileVendorCSS(),compileCSS())
-    	.pipe(concat("style.css"))
+    	#.pipe(concat("style.css"))
 
 buildCSS = (minify=false) ->
 	css = concatCSS()
@@ -112,14 +117,17 @@ buildHTML = (minify=false) ->
 	html.pipe(gulp.dest(paths.app.root))
 
 watchCSS = ->
+	livereload.listen()
 	watch paths.src.scss, ->
 		buildCSS().pipe(plumber())
 
 watchJS = ->
+	livereload.listen()
 	watch paths.src.coffee, ->
 		buildJS().pipe(plumber())
 
 watchHTML = ->
+	livereload.listen()
 	watch paths.src.jade, ->
 		buildHTML().pipe(plumber())
 
@@ -143,11 +151,10 @@ gulp.task 'buildAllHTML', ->
 gulp.task 'deployAllHTML', ->
 	buildHTML(true)
 
-gulp.task 'buildAll', ->
-	buildJS()
-	buildCSS()
+gulp.task 'buildAllFont', ->
 	buildFonts()
-	buildHTML()
+
+gulp.task 'buildAll', ['buildAllHTML','buildAllCSS','buildAllJS','buildAllFont']
 
 gulp.task 'watchCSS', ->
 	watchCSS()

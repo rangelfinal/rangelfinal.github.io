@@ -1,22 +1,99 @@
-html, body {
-	margin: 0;
-	background-color: #17577E;
-	color: #7e3e17;
-}
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
+@import 'bootstrap';
+$fa-font-path: "../font"; //Uso singular, font-awesome usa plural
+@import 'font-awesome';
+
 
 body {
-	margin-bottom: 60px;
+	margin: 0;
+	background-color: #17181D !important;
+	color: #cccccc;
+	font-family: 'Titillium Web', sans-serif;
+	height: 100%;
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	position: relative;
 }
 
 .page1 {
+	min-height: 100%;
+	min-width: 100%;
+	vertical-align: center;
+	text-align: center;
+}
+.page2 {
 	height: 100%;
 	width: 100%;
 	vertical-align: center;
 	text-align: center;
-	background-color: inherit;
+}
+.page3 {
+	height: 100%;
+	width: 100%;
+	vertical-align: center;
+	text-align: center;
+}
+.page4 {
+	height: 100%;
+	width: 100%;
+	vertical-align: center;
+	text-align: center;
+}
+
+.foto {
+	width: 50%;
+	height: auto;
 }
 
 .footer {
 	position: fixed;
 	height: 60px;
+}
+
+.arrow_box {
+	position: relative;
+	//background: #000000;
+	border: 4px solid #eeeeee;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #eeeeee;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(83, 245, 175, 0);
+	border-top-color: #eeeeee;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+.navbar-brand {
+	position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.collapse.navbar-collapse ul li {
+	:hover {
+		background-color: #bbbbbb;
+	}
+}
+
+a:hover {
+    text-decoration: none;
 }

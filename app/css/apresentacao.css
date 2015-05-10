@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5869,8 +5868,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+  src: url("../font/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../font/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../font/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../font/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7655,74 +7654,84 @@ button.close {
 .fa-medium:before {
   content: ""; }
 
-.nav, .pagination, .carousel, .panel-title a {
-  cursor: pointer; }
-
 body {
+  margin: 0;
+  background-color: #17181D !important;
+  color: #cccccc;
+  font-family: 'Titillium Web', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
   position: relative; }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  text-align: justify; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
-  color: #666666;
-  margin-top: 100px; }
-
-h2 {
-  margin-top: 50px;
-  text-align: right; }
-
-h3 {
-  margin-top: 20px;
+.page1 {
+  min-height: 100%;
+  min-width: 100%;
+  vertical-align: center;
   text-align: center; }
 
-.affix-top, .affix {
-  position: static; }
-
-@media (min-width: 979px) {
-  .sidebar.affix-top {
-    position: static;
-    margin-top: 30px;
-    width: 228px; }
-  .sidebar.affix {
-    position: fixed;
-    top: 70px;
-    width: 228px; }
-  .sidebar.affix-bottom {
-    position: absolute;
-    margin-bottom: 70px;
-    width: 228px; } }
-
-.sidebar > ul > li.active > a {
-  border: 0 #bbbbbb solid;
-  border-left-width: 5px; }
-
-.subsidebar > li > a {
-  font-size: 12px;
-  padding-top: 5px;
-  padding-bottom: 5px; }
-
-.subsidebar > li.active > a {
-  border: 0 #bbbbbb solid;
-  border-right-width: 2px; }
-
-html {
-  position: relative;
-  min-height: 100%; }
-
-body {
-  margin-bottom: 60px; }
-
-.physis p, .physis h1, .physis h2 {
-  color: #9b1400 !important;
-  display: inline-block;
-  vertical-align: center; }
-
-.logo-physis {
-  width: 120px;
-  height: 50px;
-  display: inline-block;
+.page2 {
+  height: 100%;
+  width: 100%;
   vertical-align: center;
-  align: right; }
+  text-align: center; }
+
+.page3 {
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+  text-align: center; }
+
+.page4 {
+  height: 100%;
+  width: 100%;
+  vertical-align: center;
+  text-align: center; }
+
+.foto {
+  width: 50%;
+  height: auto; }
+
+.footer {
+  position: fixed;
+  height: 60px; }
+
+.arrow_box {
+  position: relative;
+  border: 4px solid #eeeeee; }
+
+.arrow_box:after, .arrow_box:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.arrow_box:after {
+  border-color: transparent;
+  border-top-color: #eeeeee;
+  border-width: 30px;
+  margin-left: -30px; }
+
+.arrow_box:before {
+  border-color: rgba(83, 245, 175, 0);
+  border-top-color: #eeeeee;
+  border-width: 36px;
+  margin-left: -36px; }
+
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: auto; }
+
+.collapse.navbar-collapse ul li :hover {
+  background-color: #bbbbbb; }
+
+a:hover {
+  text-decoration: none; }

@@ -4,20 +4,114 @@ html
 			meta(charset='utf-8')
 			meta(http-equiv='X-UA-Compatible', content='IE=edge')
 			title Vitor Rangel
-			link(rel='stylesheet', href='css/style.css')
+			link(rel='stylesheet', href='css/vendor.css')
+			link(rel='stylesheet', href='css/apresentacao.css')
 			script(src='https://code.jquery.com/jquery-2.1.4.min.js')
 		body#top
-			.page1
-				h1 Bem vindo!
-					br
-					small Se você está perdido, meu nome é Vitor Rangel.
-			.page2
-			.page3
-			.page4
+			.container-fluid
+				.page1#page1
+					h1 Bem vindo!
+						br
+						small Se você está perdido, meu nome é Vitor Terçariol Rangel.
+					p Sou um programador brasileiro, graduando em engenharia física e diretor de TI na Physis Jr.
+					p Você pode pular direto para
+						a(href='#contato')  meu contato
+						| ,
+						a(href='#portfolio')  meu portfolio
+						|  ou
+						a(href='#info-site')  ver como esse site foi feito.
+						h2 Ou você pode ver o site inteiro!
+						h1
+							i.fa.fa-angle-double-down
+				.page2#page2
+					.row
+						.col-md-4
+						.col-md-4
+							img(src='img/rangel.jpg' class='img-responsive img-circle foto')
+						.col-md-4.text-left
+							h2 Esse sou eu!
+								br
+								small Você pode me encontrar em:
+								br
+								a(href="https://www.facebook.com/rangel.final")
+									button.btn.btn-primary(type='button' style='width: 34px;')
+										i.fa.fa-facebook
+									small  /rangel.final
+								br
+								button.btn.btn-info(type='button' style='width: 34px;')
+									i.fa.fa-twitter
+								small  @rangelfinal
+				.page3#page3
+					h2 Algumas coisas que eu já fiz:
+					.row
+						.col-md-4
+							h3
+								i.fa.fa-github  Github
+						.col-md-4
+							h3
+								i.fa.fa-bitbucket  BitBucket
+						.col-md-4
+							h3
+								i.fa.fa-google  Google Drive
+				.page4#page4
+					h2 Sobre este site
+					.row
+						.col-md-4
+							h3 Básico
+							.row
+								.col-md-4
+									h4 HTML
+										i.fa.fa-html5
+								.col-md-4
+									h4 CSS
+										i.fa.fa-css3
+								.col-md-4
+									h4 JS
+						.col-md-4
+							h3 Ferramentas
+							.row
+								.col-md-4
+									h4 Gulp
+								.col-md-4
+									h4 Bower
+								.col-md-4
+									h4 Github Pages
+						.col-md-4
+							h3 Frameworks
+							.row
+								.col-md-4
+									h4 Bootstrap
+								.col-md-4
+									h4 Angular
+								.col-md-4
+									h4 BoilerPlate
+					.row
+						p.text-muted Tudo disponível em:
+							a(href="https://github.com/rangelfinal/rangelfinal.github.io")  https://github.com/rangelfinal/rangelfinal.github.io
+				.page5#page5
+	nav.navbar.navbar-fixed-bottom.navbar-inverse
+		.container-fluid
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Vitor Rangel
+			#navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li
+						a(href="#page1") Bem Vindo!
+					li
+						a(href="#page2") A pessoa
+					li
+						a(href="#page3") Portfólio
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href="#page4") Sobre este site
+					li
+						a(href="#page5") Contato
 
-			.footer
-				.container
-				p.text-muted Você está em:
 
 	script(src='js/vendor.js', type='text/javascript')
 	script(src='js/app.js', type='text/javascript', charset='utf-8')
