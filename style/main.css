@@ -30,7 +30,9 @@ body {
 .masthead.segment {
     min-height: 700px;
     padding: 1em 0;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
+
 .masthead .logo.item img {
     margin-right: 1em;
 }
