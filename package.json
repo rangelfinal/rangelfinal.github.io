@@ -1,0 +1,23 @@
+{
+  "name": "rangelfinal.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rangelfinal/rangelfinal.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rangelfinal/rangelfinal.io/issues"
+  },
+  "homepage": "https://github.com/rangelfinal/rangelfinal.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.2.0"
+  }
+}
