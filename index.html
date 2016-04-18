@@ -7,12 +7,6 @@
         <link rel="stylesheet" href="./semantic/semantic.min.css" type="text/css">
         <link rel="stylesheet" href="./style/main.css" type="text/css"/>
         <link rel="icon" href="./images/icon.png" media="screen" title="Logo Physis Jr.">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
-        <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
-        <script src="./semantic/semantic.min.js" charset="utf-8"></script>
-        <script src="./script/main.js"></script>
     </head>
 
     <body id="top">
@@ -70,11 +64,11 @@
                 <div class="ui hidden divider"></div>
 
                 <div class="ui four cards" ng-show="order=='alphabetical'">
-                    <div class="ui card" ng-repeat="member in members | orderBy: name">
+                    <div class="ui card" ng-repeat="member in members | orderBy:'name'">
                         <div class="content">
                             <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                             <div class="header">{{member.name}}</div>
-                            <div class="meta">{{member.job}} - Desde {{member.ingressDate}}</div>
+                            <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
                             <div class="description">{{member.description}}</div>
                             <div class="extra content">
 
@@ -89,14 +83,14 @@
                     </div>
                 </div>
 
-                <div ng-repeat="board in boards | orderBy: name" ng-show="order=='boards'">
+                <div ng-repeat="board in boards | orderBy:'name'" ng-show="order=='boards'">
                     <h1>{{board.name}}</h1>
                     <div class="ui four cards">
-                        <div class="ui card" ng-repeat="member in members" data-ng-if="member.boardId == board.id">
+                        <div class="ui card" ng-repeat="member in members | orderBy: ['jobHierarchy', 'name']" data-ng-if="member.boardId == board.id">
                             <div class="content">
                                 <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                                 <div class="header">{{member.name}}</div>
-                                <div class="meta">{{member.job}} - Desde {{member.ingressDate}}</div>
+                                <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
                                 <div class="description">{{member.description}}</div>
                                 <div class="extra content">
 
@@ -117,7 +111,7 @@
                         <div class="content">
                             <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                             <div class="header">{{member.name}}</div>
-                            <div class="meta">{{member.job}} - Desde {{member.ingressDate}}</div>
+                            <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
                             <div class="description">{{member.description}}</div>
                             <div class="extra content">
 
@@ -153,6 +147,11 @@
         </div>
 
         <footer></footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
+        <script src="./semantic/semantic.min.js" charset="utf-8"></script>
+        <script src="./script/main.js"></script>
         <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </body>
 
