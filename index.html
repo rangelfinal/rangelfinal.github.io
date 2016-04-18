@@ -6,13 +6,15 @@
         <title>Physis Jr.</title>
         <link rel="stylesheet" href="./semantic/semantic.min.css" type="text/css">
         <link rel="stylesheet" href="./style/main.css" type="text/css"/>
+        <link rel="stylesheet" href="./style/logo.css" type="text/css"/>
+        <link rel="stylesheet" href="./style/animate.css" type="text/css"/>
         <link rel="icon" href="./images/icon.png" media="screen" title="Logo Physis Jr.">
     </head>
 
     <body id="top">
         <div class="ui masthead center aligned segment">
             <div class="ui main text container">
-                <img class="ui centered header big logo image" ng-src="./images/logobr.png"/>
+                <img class="ui centered header big physis logo image" ng-src="./images/logobr.png"/>
                 <h2 class="white">Formar e transformar:
                     <br/>Do estudante ao profissional, do teórico ao prático.</h2>
             </div>
@@ -20,7 +22,7 @@
 
         <div class="ui main borderless secondary pointing red menu">
             <div class="ui text container">
-                <a href="#top" class="active logo header item"><img src="images/icon.png" alt="Logo Physis Jr."></a>
+                <a href="#top" class="active header item"><img src="images/icon.png" alt="Logo Physis Jr." class="physis logo"></a>
                 <div class="right menu">
                     <a href="#institucional" class="item">Institucional</a>
                     <a href="#membros" class="item">Membros</a>
@@ -55,10 +57,10 @@
             <div ng-controller="physisCtrl">
 
                 <div class="ui four buttons">
+                    <div class="ui button" ng-class="{active: order=='boards'}" ng-click="order='boards'">Diretoria</div>
                     <div class="ui button" ng-class="{active: order=='alphabetical'}" ng-click="order='alphabetical'">Alfabético</div>
-                    <div class="ui button" ng-class="{active: order=='boards'}" ng-click="order='boards'">Por diretoria</div>
-                    <div class="ui button" ng-class="{active: order=='date'}" ng-click="order='date'">Por data de entrada</div>
-                    <div class="ui button" ng-class="{active: order=='hierarchy'}" ng-click="order='hierarchy'">Por hierarquia</div>
+                    <div class="ui button" ng-class="{active: order=='date'}" ng-click="order='date'">Data de entrada</div>
+                    <div class="ui button" ng-class="{active: order=='hierarchy'}" ng-click="order='hierarchy'">Hierarquia</div>
                 </div>
 
                 <div class="ui hidden divider"></div>
@@ -84,7 +86,7 @@
                 </div>
 
                 <div ng-repeat="board in boards | orderBy:'name'" ng-show="order=='boards'">
-                    <h1>{{board.name}}</h1>
+                    <h1>{{board.fullname}}</h1>
                     <div class="ui four cards">
                         <div class="ui card" ng-repeat="member in members | orderBy: ['jobHierarchy', 'name']" data-ng-if="member.boardId == board.id">
                             <div class="content">
@@ -104,6 +106,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="ui hidden divider"></div>
                 </div>
 
                 <div class="ui four cards" ng-show="order=='date'">
@@ -165,6 +168,7 @@
         <script src="https://code.jquery.com/jquery-2.2.3.min.js" charset="utf-8"></script>
         <script src="./semantic/semantic.min.js" charset="utf-8"></script>
         <script src="./script/main.js"></script>
+        <script src="./script/logo.js"></script>
         <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </body>
 

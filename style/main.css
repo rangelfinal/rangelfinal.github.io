@@ -40,10 +40,11 @@ body {
     z-index: 0;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 0;
 }
 .masthead.segment {
     min-height: 700px;
-    padding: 1em 0;
+    padding: 0;
     text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
 
