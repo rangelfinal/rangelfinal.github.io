@@ -68,7 +68,7 @@
                         <div class="content">
                             <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                             <div class="header">{{member.name}}</div>
-                            <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
+                            <div class="meta">{{member.job}} <br> Membro desde {{member.ingressYear}}</div>
                             <div class="description">{{member.description}}</div>
                             <div class="extra content">
 
@@ -90,7 +90,7 @@
                             <div class="content">
                                 <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                                 <div class="header">{{member.name}}</div>
-                                <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
+                                <div class="meta">{{member.job}} <br> Membro desde {{member.ingressYear}}</div>
                                 <div class="description">{{member.description}}</div>
                                 <div class="extra content">
 
@@ -107,11 +107,11 @@
                 </div>
 
                 <div class="ui four cards" ng-show="order=='date'">
-                    <div class="ui card" ng-repeat="member in members | orderBy: ingressDate">
+                    <div class="ui card" ng-repeat="member in members | orderBy: ['ingressYear','name']">
                         <div class="content">
                             <img class="ui tiny right floated image" ng-src="{{member.photo}}">
                             <div class="header">{{member.name}}</div>
-                            <div class="meta">{{member.job}} - Desde {{member.ingressYear}}</div>
+                            <div class="meta">{{member.job}} <br> Membro desde {{member.ingressYear}}</div>
                             <div class="description">{{member.description}}</div>
                             <div class="extra content">
 
