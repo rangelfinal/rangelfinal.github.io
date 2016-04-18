@@ -1,0 +1,11 @@
+{
+  "camelcase": true,
+  "quotmark": true,
+  "strict": true,
+  "node": true,
+  "jquery": true,
+  "esversion": 6,
+  "globals": {
+    "angular": true
+  }
+}

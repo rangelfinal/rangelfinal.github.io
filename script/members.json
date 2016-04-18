@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "name": "Vitor Terçariol Rangel",
+      "email": "",
+      "facebook": "",
+      "linkedin": "",
+      "boardId": 1,
+      "job": "Assessor",
+      "job_hierarchy": 3,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nam! Error fuga, suscipit, qui eius magnam libero quasi, nam dignissimos eos distinctio maiores quae tempora ab dolorum. Reprehenderit consequuntur, provident!",
+      "photo": "/images/members/rangel.jpg",
+      "ingressDate": "2012-12-31T00:00:00.517Z"
+    },
+    {
+      "name": "Vitor Terçariol Rangel",
+      "email": "",
+      "facebook": "",
+      "linkedin": "",
+      "boardId": 1,
+      "job": "Assessor",
+      "job_hierarchy": 3,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, nam! Error fuga, suscipit, qui eius magnam libero quasi, nam dignissimos eos distinctio maiores quae tempora ab dolorum. Reprehenderit consequuntur, provident!",
+      "photo": "/images/members/rangel.jpg",
+      "ingressDate": "2012-12-31T00:00:00.517Z"
+    }
+  ]
+}

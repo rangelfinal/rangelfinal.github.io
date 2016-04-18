@@ -1,0 +1,38 @@
+{
+    "boards": [{
+        "id": 1,
+        "name": "Tecnologia da Informação",
+        "fullname": "Diretoria de Tecnologia da Informação",
+        "abbr": "TI"
+    }, {
+        "id": 2,
+        "name": "Recursos Humanos",
+        "fullname": "Diretoria de Recursos Humanos",
+        "abbr": "RH"
+    }, {
+        "id": 3,
+        "name": "Administrativa",
+        "fullname": "Diretoria Administrativa",
+        "abbr": "ADM"
+    }, {
+        "id": 4,
+        "name": "Projetos",
+        "fullname": "Diretoria de Projetos",
+        "abbr": "PROJ"
+    }, {
+        "id": 5,
+        "name": "Marketing",
+        "fullname": "Diretoria de Marketing",
+        "abbr": "MKT"
+    }, {
+        "id": 6,
+        "name": "Financeira",
+        "fullname": "Diretoria Financeira",
+        "abbr": "FIN"
+    }, {
+        "id": 7,
+        "name": "Presidencia",
+        "fullname": "Diretoria Presidencia",
+        "abbr": "PRES"
+    }]
+}

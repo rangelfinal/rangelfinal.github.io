@@ -1,3 +1,11 @@
+'use strict';
+
+angular.module('physisApp', ['ngAnimate']).controller('physisCtrl', function($scope, $http) {
+  $scope.order = 'alphabetical';
+  $http.get('./script/boards.json').then(r => $scope.boards = r.data.boards);
+  $http.get('./script/members.json').then(r => $scope.members = r.data.members);
+});
+
 $('.main.menu').visibility({
     type: 'fixed'
 });
@@ -13,6 +21,6 @@ $('.image').visibility({
 });
 
 // show dropdown on hover
-$('.main.menu  .ui.dropdown').dropdown({
+$('.ui.dropdown').dropdown({
     on: 'hover'
 });
