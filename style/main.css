@@ -9,6 +9,7 @@ body {
 }
 
 .cards {
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 }
 
@@ -18,7 +19,8 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
-    filter: blur(5px) brightness(0.7) contrast(150%) grayscale(50%);
+    -webkit-filter: blur(5px) brightness(0.7) contrast(150%) grayscale(50%);
+            filter: blur(5px) brightness(0.7) contrast(150%) grayscale(50%);
     display: block;
     background-image: url(/images/trainees.png);
     width: 100%;
@@ -58,6 +60,7 @@ body {
     border-radius: 0;
     border: none;
     box-shadow: none;
+    -webkit-transition: box-shadow 0.5s ease, padding 0.5s ease;
     transition: box-shadow 0.5s ease, padding 0.5s ease;
 }
 .main.menu .item .logo {
@@ -70,6 +73,7 @@ body {
 .overlay .menu {
     position: relative;
     left: 0;
+    -webkit-transition: left 0.5s ease;
     transition: left 0.5s ease;
 }
 .main.menu.fixed {
