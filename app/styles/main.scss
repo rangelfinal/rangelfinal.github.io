@@ -32,15 +32,6 @@ html {
   }
 }
 
-.moving.grey.part {
-  animation: moveRight 1s linear 0s infinite alternate;
-}
-@keyframes moveRight {
-  to {
-    transform: translate(100px, 0);
-  }
-}
-
 .logo.logo3 {
   overflow: hidden;
 
