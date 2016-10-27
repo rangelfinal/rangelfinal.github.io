@@ -14,12 +14,29 @@ html, body {
   width: 100%;
 }
 
-.white.line {
+.logo .red.part {
+  fill: #9d0000;
+}
+
+.logo .grey.part {
+  fill: #7d7d7d;
+}
+
+.logo1 .white.line {
   stroke-dasharray: 50;
   animation: dash 1s linear 0s infinite;
 }
 @keyframes dash {
   to {
     stroke-dashoffset: 200;
+  }
+}
+
+.moving.grey.part {
+  animation: moveRight 1s linear 0s infinite alternate;
+}
+@keyframes moveRight {
+  to {
+    transform: translate(100px, 0);
   }
 }
