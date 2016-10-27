@@ -1,19 +1,14 @@
 $(document).ready(() => {
-  defineLogoSize();
-  $( window ).resize(defineLogoSize);
+
+  var path = document.querySelector('.logo5 .white.line');
+  var length = path.getTotalLength();
+
+  $('.logo.logo5').hover(animate);
+
+  function animate() {
+    // Set up the starting positions
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+    $('.logo5 .white.line').animate({strokeDashoffset: 0}, 5000);
+  };
 });
-
-function defineLogoSize() {
-  let width = $('.main.menu').width();
-  let height = $('.main.menu').height();
-  let size = width < height ? width : height;
-  size = (size/Math.sqrt(2))*0.75;
-  $('.logo').width(size);
-  $('.logo').height(size);
-
-  let marginLeft = (width - size)/2;
-  let marginTop = (height - size)/2;
-  let minimumMargin = (size*Math.sqrt(2) - size)/2;
-  $('.logo').css('margin-left', marginLeft > minimumMargin ? marginLeft : minimumMargin);
-  $('.logo').css('margin-top', marginTop > minimumMargin ? marginTop : minimumMargin);
-}

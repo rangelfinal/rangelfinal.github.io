@@ -1,7 +1,5 @@
-$icon-font-path: '../fonts/';
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+$icon-font-path: '../fonts/'; // bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
 
 body,
 html {
@@ -12,6 +10,12 @@ html {
 .logo {
   height: 100%;
   width: 100%;
+
+  .mirror {
+    stroke: white;
+    stroke-width: 5;
+    stroke-dasharray: none;
+  }
 }
 
 .logo .red.part {
@@ -78,5 +82,89 @@ html {
   to {
     transform: translate(0,0);
     opacity: 1;
+  }
+}
+
+.logo.logo4 {
+  stroke: red;
+  stroke-width: 3;
+  stroke-dasharray: 50;
+
+  .red {
+    animation: redSection 1s linear infinite;
+  }
+
+  .grey {
+    animation: greySection 1s linear infinite;
+    //stroke-dashoffset: 70;
+  }
+
+  polyline {
+    animation: polylineSection 1s linear infinite;
+    //stroke-dashoffset: 60;
+  }
+}
+@keyframes redSection {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes greySection {
+  from {
+    stroke-dashoffset: 65;
+  }
+
+  to {
+    stroke-dashoffset: 165;
+  }
+}
+@keyframes polylineSection {
+  from {
+    stroke-dashoffset: 60;
+  }
+
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+.logo.logo5 {
+  transform: rotate(45deg);
+
+  .mirror {
+    stroke-width: 0;
+  }
+}
+
+.logo.logo5:hover {
+  animation: rotation 5s linear;
+  animation-fill-mode: forwards;
+
+  .mirror {
+    animation: mirrors 5s linear;
+    animation-fill-mode: forwards;
+  }
+
+  .white.line {
+    stroke: white;
+    stroke-width: 3;
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mirrors {
+  from {
+    stroke-width: 0;
+  }
+
+  to {
+    stroke-width: 5;
   }
 }
