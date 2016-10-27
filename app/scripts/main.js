@@ -1,7 +1,6 @@
 $(document).ready(() => {
   defineLogoSize();
   $( window ).resize(defineLogoSize);
-  new Vivus('logo', 1000, file: 'link/to/my.svg'}, myCallback);
 });
 
 function defineLogoSize() {
