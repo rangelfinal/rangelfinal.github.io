@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){function e(){o.style.strokeDasharray=t+" "+t,o.style.strokeDashoffset=t,$(".logo5 .white.line").animate({strokeDashoffset:0},5e3)}var o=document.querySelector(".logo5 .white.line"),t=o.getTotalLength();$(".logo.logo5").hover(e)});
